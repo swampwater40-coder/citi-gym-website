@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>About Us</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/6/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="styles.css">
+<style>
+  body {
+    font-size: 18px;
+    background: linear-gradient(to bottom, #87CEEB, #ffffff);
+    min-height: 100vh;
+    margin: 0;
+  }
+  /* 4-column grid with equal height stretching to fill the page cleanly */
+  .about-grid {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    gap: 20px;
+    justify-content: center;
+    max-width: 1250px;
+    margin: 40px auto;
+    padding: 0 15px;
+  }
+  .about-card {
+    background-color: #ffffff;
+    border: 1px solid #000;
+    border-radius: 6px;
+    padding: 25px 20px;
+    flex: 1;
+    min-width: 250px;
+    max-width: 290px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    box-sizing: border-box;
+    color: #000;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  }
+  .about-card h3 {
+    font-size: 17px;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 12px;
+    color: #111;
+    border-bottom: 2px solid #87CEEB;
+    padding-bottom: 8px;
+  }
+  .about-card p {
+    font-size: 13px;
+    line-height: 1.5;
+    color: #333;
+    margin: 0 0 12px 0;
+  }
+  .about-card p:last-child {
+    margin-bottom: 0;
+  }
+  /* W3Schools Social Button Styles */
+  .fa {
+    padding: 15px;
+    font-size: 20px;
+    width: 45px;
+    height: 45px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 5px;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+  }
+  .fa:hover {
+    opacity: 0.7;
+  }
+  .fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+  .fa-instagram {
+    background: #125688;
+    color: white;
+  }
+  .fa-twitter {
+    background: #000000;
+    color: white;
+  }
+  /* Flat footer with no box container */
+  .flat-footer {
+    padding: 30px 20px;
+    text-align: center;
+    margin-top: 60px;
+  }
+</style>
+</head>
+<body id="myPage">
+
+<!-- Sidebar on click -->
+<nav class="w3-sidebar w3-bar-block w3-white w3-card w3-animate-left w3-xxlarge" style="display:none;z-index:2" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-display-topright w3-text-blue">Close <i class="fa fa-remove"></i></a>
+  <a href="home.html" class="w3-bar-item w3-button">Home Page</a>
+  <a href="aboutus.html" class="w3-bar-item w3-button">About</a>
+  <a href="activities.html" class="w3-bar-item w3-button">Activities</a>
+  <a href="newsandevents.html" class="w3-bar-item w3-button">News & Updates</a>
+  <a href="contact.html" class="w3-bar-item w3-button">Contact</a>
+</nav>
+
+<!-- Navbar -->
+<div class="w3-top">
+ <div class="w3-bar w3-theme-d2 w3-left-align">
+  <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+  <a href="home.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white" style="padding: 8px 16px;">
+    <img src="images/CitiGymLogo.png" alt="Citi Gym Logo" style="height: 24px; width: auto;" class="w3-margin-right">Home Page
+  </a>
+  <a href="aboutus.html" class="w3-bar-item w3-button w3-blue" style="padding: 8px 16px;">About</a>
+  <a href="activities.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white" style="padding: 8px 16px;">Activities</a>
+  <a href="newsandevents.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white" style="padding: 8px 16px;">News & Updates</a>
+  <a href="contact.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white" style="padding: 8px 16px;">Contact Info</a>
+ </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium">
+    <a href="home.html" class="w3-bar-item w3-button">Home Page</a>
+    <a href="aboutus.html" class="w3-bar-item w3-button w3-blue">About</a>
+    <a href="activities.html" class="w3-bar-item w3-button">Activities</a>
+    <a href="newsandevents.html" class="w3-bar-item w3-button">News & Updates</a>
+    <a href="contact.html" class="w3-bar-item w3-button">Contact Info</a>
+  </div>
+</div>
+
+<!-- Header & Slogan Section -->
+<div style="margin-top: 65px; padding: 20px 30px; max-width: 1250px; margin-left: auto; margin-right: auto;">
+  <h1 style="font-weight: bold; margin-bottom: 5px;">Citi Gym</h1>
+  <p style="font-size: 20px; font-weight: 500; margin-top: 0; color: #222;">Push Your Limits,<br>Shape Your Future.</p>
+</div>
+
+<!-- Exact 4-Column Wireframe Grid with Informative, Expanded Text -->
+<div class="about-grid">
+  
+  <!-- Box 1: Mission and Vision -->
+  <div class="about-card">
+    <h3>Mission & Vision</h3>
+    <p>
+      At Citi Gym, our core mission is to provide an empowering, inclusive, and high-performance training environment tailored for individuals of all fitness levels. We believe that physical health is the cornerstone of mental resilience and overall well-being.
+    </p>
+    <p>
+      Our vision focuses on building a tight-knit community where members encourage one another, free from intimidation. We strive to deliver top-tier coaching, modern equipment, and accessible wellness programs that inspire lifelong healthy habits.
+    </p>
+  </div>
+
+  <!-- Box 2: Background and History -->
+  <div class="about-card">
+    <h3>Background & History</h3>
+    <p>
+      Established with a profound passion for community fitness and athletic development, Citi Gym started out as a compact local strength training facility. Through dedication, consistency, and strong local support, we have expanded our floor space significantly.
+    </p>
+    <p>
+      Over the years, we have continuously upgraded our equipment layout, introduced specialized fitness classes, and refined our training zones. Despite our growth, we remain deeply rooted in our community-first values and approachable atmosphere.
+    </p>
+  </div>
+
+  <!-- Box 3: Qualified Staff -->
+  <div class="about-card">
+    <h3>Qualified Staff</h3>
+    <p>
+      Our team is comprised of certified personal trainers, sports scientists, and conditioning experts who hold industry-accredited qualifications. Every instructor brings years of hands-on coaching experience across diverse training disciplines.
+    </p>
+    <p>
+      Whether you need assistance building a custom workout schedule, refining your squat and deadlift technique, or receiving practical nutritional guidance, our staff are always on hand to ensure you train safely and effectively.
+    </p>
+  </div>
+
+  <!-- Box 4: Facilities & Environment -->
+  <div class="about-card">
+    <h3>Facilities & Environment</h3>
+    <p>
+      Our facility is fully outfitted with commercial-grade resistance machines, heavy-duty Olympic lifting platforms, robust dumbbell racks, and an expansive cardio suite featuring treadmills, rowers, and upright bikes.
+    </p>
+    <p>
+      We maintain a meticulously clean, bright, and well-ventilated layout with modern locker rooms and showers. Our environment is engineered to ensure every member enjoys a safe, premium, and comfortable training session every single day.
+    </p>
+  </div>
+
+</div>
+
+<!-- Flat Footer with Styled FontAwesome Buttons -->
+<footer class="flat-footer">
+  <div style="display: flex; justify-content: center; align-items: center; gap: 10px;">
+    <a href="https://www.facebook.com" target="_blank" class="fa fa-facebook" title="Facebook"></a>
+    <a href="https://www.instagram.com" target="_blank" class="fa fa-instagram" title="Instagram"></a>
+    <a href="https://www.x.com" target="_blank" class="fa fa-twitter" title="X"></a>
+  </div>
+  <p style="text-align: center; margin-top: 15px; font-size: 12px; color: #333;">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+</footer>
+
+<script>
+function w3_open() {
+  var x = document.getElementById("mySidebar");
+  x.style.width = "300px";
+  x.style.paddingTop = "10%";
+  x.style.display = "block";
+}
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+function openNav() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
+</body>
+</html>

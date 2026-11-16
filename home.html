@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Home</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/6/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="styles.css">
+<style>
+  body {
+    margin: 0;
+    background: linear-gradient(to bottom, #87CEEB, #ffffff);
+    min-height: 100vh;
+  }
+  /* 2-column layout matching wireframe style */
+  .home-grid {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    gap: 20px;
+    justify-content: center;
+    max-width: 1250px;
+    margin: 30px auto;
+    padding: 0 15px;
+  }
+  .home-wireframe-box {
+    background-color: #87CEEB;
+    border: 1px solid #000;
+    padding: 20px;
+    flex: 1;
+    min-width: 300px;
+    max-width: 580px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  /* Unboxed video container on the left */
+  .video-left-container {
+    background-color: #87CEEB;
+    border: 1px solid #000;
+    padding: 20px;
+    flex: 1;
+    min-width: 300px;
+    max-width: 580px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+  }
+  /* Flat footer with no box container */
+  .flat-footer {
+    padding: 30px 20px;
+    text-align: center;
+    margin-top: 50px;
+  }
+</style>
+</head>
+<body id="myPage">
+
+<!-- Sidebar on click -->
+<nav class="w3-sidebar w3-bar-block w3-white w3-card w3-animate-left w3-xxlarge" style="display:none;z-index:2" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-display-topright w3-text-blue">Close <i class="fa fa-remove"></i></a>
+  <a href="home.html" class="w3-bar-item w3-button">Home Page</a>
+  <a href="aboutus.html" class="w3-bar-item w3-button">About</a>
+  <a href="activities.html" class="w3-bar-item w3-button">Activities</a>
+  <a href="newsandevents.html" class="w3-bar-item w3-button">News & Updates</a>
+  <a href="contact.html" class="w3-bar-item w3-button">Contact</a>
+</nav>
+
+<!-- Navbar -->
+<div class="w3-top">
+ <div class="w3-bar w3-theme-d2 w3-left-align">
+  <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+  <a href="home.html" class="w3-bar-item w3-button w3-blue" style="padding: 8px 16px;">
+    <img src="images/CitiGymLogo.png" alt="Citi Gym Logo" style="height: 24px; width: auto;" class="w3-margin-right">Home Page
+  </a>
+  <a href="aboutus.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white" style="padding: 8px 16px;">About</a>
+  <a href="activities.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white" style="padding: 8px 16px;">Activities</a>
+  <a href="newsandevents.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white" style="padding: 8px 16px;">News & Updates</a>
+  <a href="contact.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white" style="padding: 8px 16px;">Contact Info</a>
+ </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium">
+    <a href="home.html" class="w3-bar-item w3-button">Home Page</a>
+    <a href="aboutus.html" class="w3-bar-item w3-button">About</a>
+    <a href="activities.html" class="w3-bar-item w3-button">Activities</a>
+    <a href="newsandevents.html" class="w3-bar-item w3-button">News & Updates</a>
+    <a href="contact.html" class="w3-bar-item w3-button">Contact Info</a>
+  </div>
+</div>
+
+<!-- Full-Width Edge-to-Edge Image Header -->
+<div style="margin-top: 38px; width: 100%;">
+  <div class="w3-display-container" style="width: 100%;">
+    <img src="images/CityGymHomepage.png" alt="Citi Gym Interior" style="width: 100%; height: auto; min-height: 350px; max-height: 550px; object-fit: cover; display: block;">
+    <div class="w3-container w3-display-bottomleft" style="margin-bottom: 20px; margin-left: 20px;">  
+      <h1 style="color: white; font-size: 48px; font-weight: bold; margin: 0; text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">Citi Gym</h1>
+    </div>
+  </div>
+</div>
+
+<!-- 2-Column Section: Clean Video on Left, Special Offers Box on Right -->
+<div class="home-grid">
+  
+  <!-- Left Column: Video Only -->
+  <div class="video-left-container">
+    <video controls style="width: 100%; max-height: 320px; display: block; border-radius: 4px;">
+      <source src="videos/CitiGymVid.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <!-- Right Column: Special Offers & News Link Box -->
+  <div class="home-wireframe-box">
+    <div>
+      <h3 style="margin-top: 0; font-size: 18px; font-weight: bold; color: #000;">Special Offers & Updates</h3>
+      <p style="font-size: 14px; line-height: 1.5; color: #333; margin-top: 10px;">
+        Looking for the best value to kickstart your fitness journey? Check out our latest membership promotions, student discounts, and upcoming community training events.
+      </p>
+      <p style="font-size: 14px; line-height: 1.5; color: #333;">
+        Stay ahead of schedule and never miss out on exclusive deals and gym announcements by visiting our dedicated updates page.
+      </p>
+    </div>
+    <div style="margin-top: 20px; text-align: center;">
+      <a href="newsandevents.html" class="w3-button w3-blue" style="border: 1px solid #000; border-radius: 4px; font-weight: bold; width: 100%; padding: 10px;">Click Here for News & Updates</a>
+    </div>
+  </div>
+
+</div>
+
+<!-- Flat Footer with Styled FontAwesome Buttons -->
+<footer class="flat-footer">
+  <div style="display: flex; justify-content: center; align-items: center; gap: 10px;">
+    <a href="https://www.facebook.com" target="_blank" class="fa fa-facebook" title="Facebook"></a>
+    <a href="https://www.instagram.com" target="_blank" class="fa fa-instagram" title="Instagram"></a>
+    <a href="https://www.x.com" target="_blank" class="fa fa-twitter" title="X"></a>
+  </div>
+  <p style="text-align: center; margin-top: 15px; font-size: 12px; color: #333;">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+</footer>
+
+<script>
+function w3_open() {
+  var x = document.getElementById("mySidebar");
+  x.style.width = "300px";
+  x.style.paddingTop = "10%";
+  x.style.display = "block";
+}
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+function openNav() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
+</body>
+</html>

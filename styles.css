@@ -1,0 +1,94 @@
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to bottom, #ffffff 0%, #4db8ff 100%) !important;
+  background-attachment: fixed !important;
+  background-repeat: no-repeat !important;
+}
+
+/* Navbar link styling and smooth hover transition */
+.w3-bar a {
+  color: #ffffff !important;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.w3-bar a:hover {
+  background-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+/* Hero image card with soft shadow and rounded appearance */
+.hero-container {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.hero-container:hover {
+  transform: translateY(-2px);
+}
+
+/* Interactive video card modern styling and hover lift */
+.interactive-card {
+  background: linear-gradient(135deg, #00b4db, #0083b0) !important;
+  color: white !important;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 131, 176, 0.3);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  cursor: pointer;
+}
+
+.interactive-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 35px rgba(0, 131, 176, 0.45);
+}
+
+/* W3Schools Social Button Styles */
+.fa {
+  padding: 15px;
+  font-size: 20px;
+  width: 45px;
+  height: 45px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 5px;
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.fa:hover {
+  opacity: 0.7;
+  transform: scale(1.1);
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+.fa-twitter {
+  background: #000000;
+  color: white;
+}
+
+/* Override the Twitter bird icon to display a clean X */
+.fa-twitter::before {
+  content: "𝕏";
+  font-family: 'Segoe UI', Arial, sans-serif;
+  font-weight: bold;
+  font-style: normal;
+}
